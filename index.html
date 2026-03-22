@@ -4,18 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarHub</title>
-  <meta name="description" content="CarHub is a platform for easy garage bookings, automotive events, and car community updates across Luxembourg and the Greater Region.">
+  <meta name="description" content="CarHub is a platform for easy garage bookings and car events across Luxembourg and the Greater Region.">
   <style>
     :root {
       --bg: #111315;
-      --bg-2: #171a1f;
       --surface: rgba(255, 255, 255, 0.04);
       --surface-2: rgba(255, 255, 255, 0.06);
       --border: rgba(255, 255, 255, 0.10);
       --text: #f3f4f6;
       --text-soft: #c6cbd3;
       --muted: #8d95a3;
-      --accent: #d9dde3;
       --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
     }
 
@@ -40,7 +38,7 @@
 
     .shell {
       width: 100%;
-      max-width: 1100px;
+      max-width: 1120px;
     }
 
     .card {
@@ -85,10 +83,11 @@
     }
 
     h1 {
-      margin: 0 0 16px 0;
-      font-size: clamp(40px, 6vw, 64px);
-      line-height: 1.03;
+      margin: 0 0 18px 0;
+      font-size: clamp(34px, 4.8vw, 54px);
+      line-height: 1.08;
       letter-spacing: -0.03em;
+      max-width: 720px;
     }
 
     .lead {
@@ -107,11 +106,31 @@
       max-width: 620px;
     }
 
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--border);
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .status strong {
+      color: var(--text);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
     .cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 30px;
+      margin-top: 26px;
     }
 
     .pill {
@@ -135,26 +154,6 @@
       border-color: rgba(255,255,255,0.18);
     }
 
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 28px;
-      padding: 12px 16px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid var(--border);
-      color: var(--text-soft);
-      font-size: 14px;
-    }
-
-    .status strong {
-      color: var(--text);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-
     .right {
       display: flex;
       align-items: center;
@@ -168,8 +167,8 @@
 
     .preview {
       width: 100%;
-      max-width: 390px;
-      padding: 26px;
+      max-width: 410px;
+      padding: 28px;
       border-radius: 26px;
       background: rgba(0,0,0,0.18);
       border: 1px solid rgba(255,255,255,0.08);
@@ -177,26 +176,27 @@
     }
 
     .logo-box {
-      height: 140px;
+      height: 180px;
       border-radius: 22px;
       background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
       border: 1px solid rgba(255,255,255,0.08);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       overflow: hidden;
+      padding: 18px;
     }
 
     .logo-box img {
-      max-width: 75%;
-      max-height: 90px;
+      max-width: 95%;
+      max-height: 135px;
       object-fit: contain;
       display: block;
     }
 
     .logo-fallback {
-      font-size: 28px;
+      font-size: 34px;
       font-weight: 700;
       letter-spacing: -0.02em;
       color: var(--text);
@@ -204,7 +204,7 @@
 
     .preview-title {
       margin: 0 0 10px 0;
-      font-size: 24px;
+      font-size: 22px;
     }
 
     .preview-text {
@@ -268,7 +268,7 @@
           CarHub · Luxembourg & Greater Region
         </div>
 
-        <h1>Garage bookings, car events, and local automotive updates — in one place.</h1>
+        <h1>Garage bookings and car events — in one place.</h1>
 
         <p class="lead">
           CarHub is a modern platform built to help drivers book garage services with ease while staying connected to the car world across Luxembourg and the Greater Region.
@@ -299,7 +299,7 @@
 
           <h2 class="preview-title">CarHub</h2>
           <p class="preview-text">
-            A new platform for drivers to access garage services more easily and discover what is happening in the regional automotive scene.
+            A new platform for easier garage bookings and access to car events across Luxembourg and the Greater Region.
           </p>
         </div>
       </aside>
