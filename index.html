@@ -4,103 +4,314 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarHub</title>
+  <meta name="description" content="CarHub is a platform for easy garage bookings, automotive events, and car community updates across Luxembourg and the Greater Region.">
   <style>
     :root {
       --bg: #111315;
-      --surface: #1A1D21;
-      --text: #F3F4F6;
-      --text-soft: #B8BDC7;
-      --muted: #7C838F;
-      --border: #2A2F36;
-      --accent: #D6D9DE;
+      --bg-2: #171a1f;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-2: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.10);
+      --text: #f3f4f6;
+      --text-soft: #c6cbd3;
+      --muted: #8d95a3;
+      --accent: #d9dde3;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
     }
 
-    * {
-      box-sizing: border-box;
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #1a1e24 0%, #111315 48%, #0d0f12 100%);
+      color: var(--text);
     }
 
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 28px;
     }
 
-    .box {
+    .shell {
       width: 100%;
-      max-width: 760px;
+      max-width: 1100px;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .left, .right {
+      padding: 42px;
+    }
+
+    .left {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 999px;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 48px 32px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+      color: var(--text-soft);
+      font-size: 14px;
+      margin-bottom: 24px;
     }
 
-    img {
-      max-width: 110px;
-      margin-bottom: 20px;
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #9aa3af;
+      display: inline-block;
     }
 
     h1 {
-      font-size: 42px;
-      margin: 0 0 12px 0;
-      letter-spacing: 0.5px;
-      color: var(--text);
+      margin: 0 0 16px 0;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.03;
+      letter-spacing: -0.03em;
     }
 
-    .subtitle {
+    .lead {
+      margin: 0 0 18px 0;
       font-size: 18px;
-      line-height: 1.7;
+      line-height: 1.75;
       color: var(--text-soft);
       max-width: 620px;
-      margin: 0 auto;
     }
 
-    .coming {
-      margin-top: 26px;
-      font-size: 16px;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-      color: var(--accent);
+    .sub {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 620px;
     }
 
-    .footer {
-      margin-top: 34px;
+    .cta-row {
       display: flex;
       flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
       justify-content: center;
-      gap: 18px;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .pill:hover {
+      transform: translateY(-1px);
+      background: var(--surface-2);
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--border);
+      color: var(--text-soft);
       font-size: 14px;
     }
 
-    .footer a {
+    .status strong {
+      color: var(--text);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05), transparent 28%),
+        linear-gradient(180deg, #171a1f, #121418);
+      border-left: 1px solid var(--border);
+    }
+
+    .preview {
+      width: 100%;
+      max-width: 390px;
+      padding: 26px;
+      border-radius: 26px;
+      background: rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+    }
+
+    .logo-box {
+      height: 140px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .logo-box img {
+      max-width: 75%;
+      max-height: 90px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-fallback {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .preview-title {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+    }
+
+    .preview-text {
+      margin: 0;
       color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 18px;
+      padding: 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer a {
+      color: var(--muted);
       text-decoration: none;
+      margin-right: 14px;
     }
 
     .footer a:hover {
-      color: var(--text);
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 860px) {
+      .card {
+        grid-template-columns: 1fr;
+      }
+
+      .right {
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+
+      .left, .right {
+        padding: 28px;
+      }
+
+      .preview {
+        max-width: 100%;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <img src="logo.png" alt="CarHub logo">
-    <h1>CarHub</h1>
-    <p class="subtitle">
-      CarHub is a modern platform built to simplify how drivers connect with garages and vehicle service providers across mobile and web.
-    </p>
-    <div class="coming">Coming Soon</div>
+  <div class="shell">
+    <div class="card">
+      <section class="left">
+        <div class="brand">
+          <span class="dot"></span>
+          CarHub · Luxembourg & Greater Region
+        </div>
+
+        <h1>Garage bookings, car events, and local automotive updates — in one place.</h1>
+
+        <p class="lead">
+          CarHub is a modern platform built to help drivers book garage services with ease while staying connected to the car world across Luxembourg and the Greater Region.
+        </p>
+
+        <p class="sub">
+          We are currently building the first version of CarHub across mobile and web, with a focus on convenience, clarity, and a better experience for drivers and service providers.
+        </p>
+
+        <div class="status">
+          <strong>Coming soon</strong>
+          <span>Early version in development</span>
+        </div>
+
+        <div class="cta-row">
+          <a class="pill" href="about.html">About CarHub</a>
+          <a class="pill" href="privacy.html">Privacy Policy</a>
+          <a class="pill" href="legal.html">Legal Notice</a>
+        </div>
+      </section>
+
+      <aside class="right">
+        <div class="preview">
+          <div class="logo-box">
+            <img src="logo.png" alt="CarHub logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="logo-fallback" style="display:none;">CarHub</div>
+          </div>
+
+          <h2 class="preview-title">CarHub</h2>
+          <p class="preview-text">
+            A new platform for drivers to access garage services more easily and discover what is happening in the regional automotive scene.
+          </p>
+        </div>
+      </aside>
+    </div>
+
     <div class="footer">
-      <a href="/about.html">About</a>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/legal.html">Legal Notice</a>
+      <div>© 2026 CarHub</div>
+      <div>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="legal.html">Legal Notice</a>
+      </div>
     </div>
   </div>
 </body>
