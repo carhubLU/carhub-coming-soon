@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarHub</title>
+  <style>
+    :root {
+      --bg: #111315;
+      --surface: #1A1D21;
+      --text: #F3F4F6;
+      --text-soft: #B8BDC7;
+      --muted: #7C838F;
+      --border: #2A2F36;
+      --accent: #D6D9DE;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 760px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 32px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    img {
+      max-width: 110px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 0 0 12px 0;
+      letter-spacing: 0.5px;
+      color: var(--text);
+    }
+
+    .subtitle {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-soft);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .coming {
+      margin-top: 26px;
+      font-size: 16px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .footer {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: var(--text-soft);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="logo.png" alt="CarHub logo">
+    <h1>CarHub</h1>
+    <p class="subtitle">
+      CarHub is a modern platform built to simplify how drivers connect with garages and vehicle service providers across mobile and web.
+    </p>
+    <div class="coming">Coming Soon</div>
+    <div class="footer">
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/legal.html">Legal Notice</a>
+    </div>
+  </div>
+</body>
+</html>
