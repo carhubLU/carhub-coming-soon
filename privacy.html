@@ -7,54 +7,74 @@
   <style>
     :root {
       --bg: #111315;
-      --surface: #1A1D21;
-      --text: #F3F4F6;
-      --text-soft: #B8BDC7;
-      --border: #2A2F36;
+      --surface: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.10);
+      --text: #f3f4f6;
+      --text-soft: #c6cbd3;
+      --muted: #8d95a3;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
     }
+
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: var(--bg);
+      background: radial-gradient(circle at top, #1a1e24 0%, #111315 48%, #0d0f12 100%);
       color: var(--text);
-      padding: 32px 20px;
+      padding: 28px;
     }
 
     .page {
       max-width: 900px;
       margin: 0 auto;
-      background: var(--surface);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 36px 28px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 38px 32px;
     }
 
     h1 {
       margin-top: 0;
       margin-bottom: 20px;
-      font-size: 32px;
+      font-size: 38px;
+    }
+
+    h2 {
+      margin-top: 26px;
+      color: var(--text);
+      font-size: 20px;
     }
 
     p {
       color: var(--text-soft);
-      line-height: 1.7;
+      line-height: 1.8;
       font-size: 16px;
       margin-bottom: 18px;
     }
 
-    a {
+    .toplink {
       color: var(--text);
       text-decoration: none;
     }
 
-    a:hover {
+    .toplink:hover {
       text-decoration: underline;
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
   <div class="page">
+    <a class="toplink" href="index.html">← Back to home</a>
+    <div class="eyebrow">Privacy Policy</div>
     <h1>Privacy Policy</h1>
 
     <p>
@@ -62,18 +82,20 @@
     </p>
 
     <p>
-      This website is currently a simple coming soon page intended to present the CarHub project.
-      We do not currently collect personal data through forms, account registration, or booking features on this page.
+      This website is currently a simple coming soon page intended to present the CarHub project. We do not currently collect personal data through forms, account registration, or booking features on this page.
     </p>
 
+    <h2>Technical data</h2>
     <p>
-      However, basic technical data such as IP address, browser information, and server requests may be processed automatically for hosting, security, performance, and website delivery purposes.
+      Basic technical data such as IP address, browser information, device information, and server requests may be processed automatically for hosting, security, performance, and website delivery purposes.
     </p>
 
+    <h2>Future updates</h2>
     <p>
-      If analytics, cookies, contact forms, newsletters, or user accounts are added in the future, this privacy policy will be updated accordingly.
+      If analytics, cookies, contact forms, newsletters, account registration, or booking functionality are added in the future, this privacy policy will be updated accordingly.
     </p>
 
+    <h2>Contact</h2>
     <p>
       For privacy-related questions, you may contact us at: contact@carhub.lu
     </p>
@@ -81,8 +103,6 @@
     <p>
       Last updated: 22 March 2026
     </p>
-
-    <p><a href="index.html">Back to home</a></p>
   </div>
 </body>
 </html>
