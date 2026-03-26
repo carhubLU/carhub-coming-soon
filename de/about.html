@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über CarHub</title>
+
+  <link rel="icon" href="../favicon.png">
+
+  <style>
+    :root {
+      --bg: #e6efe8;
+      --surface: #f4f8f5;
+      --text: #0f2d2a;
+      --text-soft: #3d5a57;
+      --muted: #6b8a87;
+      --border: rgba(15,45,42,0.12);
+      --accent: #2e5f5b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px;
+    }
+
+    .page {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      background: var(--surface);
+      border-radius: 28px;
+      padding: 40px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .lang-switch a.active {
+      text-decoration: underline;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+
+    p {
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 56px 18px 28px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .lang-switch {
+        top: 14px;
+        right: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="lang-switch">
+      <a href="../about.html">EN</a>
+      <a href="about.html" class="active">DE</a>
+      <a href="../fr/about.html">FR</a>
+    </div>
+
+    <a href="index.html">← Zur Startseite</a>
+
+    <h1>Über CarHub</h1>
+
+    <p>
+      CarHub ist eine Plattform, die entwickelt wurde, um die Interaktion zwischen Fahrern, Werkstätten und Fahrzeugdienstleistern zu vereinfachen.
+    </p>
+
+    <p>
+      Unser Ziel ist es, die Buchung von Fahrzeugservices schnell, transparent und unkompliziert zu gestalten, damit Nutzer Werkstattservices einfach finden und buchen können.
+    </p>
+
+    <p>
+      Darüber hinaus bringt CarHub alles rund um die Automobilwelt in Luxemburg und der Großregion zusammen, einschliesslich Events, Treffen und relevanter Informationen für Autoenthusiasten.
+    </p>
+
+    <p>
+      Durch die Verbindung praktischer Funktionen mit community-orientierten Inhalten möchte CarHub zu einer zentralen Plattform für Fahrer werden, sei es für die Verwaltung ihres Fahrzeugs oder um mit der lokalen Automobilszene verbunden zu bleiben.
+    </p>
+
+    <p>
+      CarHub befindet sich derzeit in der Entwicklung und wird in Kürze verfügbar sein.
+    </p>
+  </div>
+</body>
+</html>
