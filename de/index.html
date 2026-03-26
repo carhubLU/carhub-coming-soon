@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarHub</title>
+
+  <link rel="icon" href="../favicon.png">
+  <link rel="preload" as="image" href="../logo.png">
+
+  <style>
+    :root {
+      --bg: #e6efe8;
+      --surface: #f4f8f5;
+      --text: #0f2d2a;
+      --text-soft: #3d5a57;
+      --muted: #6b8a87;
+      --border: rgba(15,45,42,0.12);
+      --accent: #2e5f5b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .card {
+      position: relative;
+      background: var(--surface);
+      border-radius: 28px;
+      padding: 40px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .lang-switch a.active {
+      text-decoration: underline;
+    }
+
+    .logo {
+      max-width: 320px;
+      width: 100%;
+      margin: 0 auto 30px auto;
+      display: block;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 18px;
+      color: var(--text-soft);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .sub {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 12px;
+      background: #dce8e1;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+    }
+
+    .links {
+      margin-top: 25px;
+    }
+
+    .links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .links a:hover,
+    .lang-switch a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 56px 18px 28px;
+      }
+
+      .logo {
+        max-width: 240px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .lang-switch {
+        top: 14px;
+        right: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="lang-switch">
+        <a href="../index.html">EN</a>
+        <a href="index.html" class="active">DE</a>
+        <a href="../fr/index.html">FR</a>
+      </div>
+
+      <img src="../logo.png" class="logo" alt="CarHub logo" loading="eager" fetchpriority="high" decoding="async">
+
+      <h1>Werkstattbuchungen und Auto-Events — an einem Ort.</h1>
+
+      <p class="lead">
+        CarHub ist eine Plattform, die es Fahrern ermöglicht, Werkstattservices einfach zu buchen und gleichzeitig mit der Automobilwelt in Luxemburg und der Großregion verbunden zu bleiben.
+      </p>
+
+      <p class="sub">
+        Wir entwickeln derzeit die erste Version von CarHub für Mobile und Web, mit Fokus auf Einfachheit, Klarheit und ein besseres Nutzererlebnis für Fahrer und Dienstleister.
+      </p>
+
+      <div class="status">
+        BALD VERFÜGBAR · Erste Version in Entwicklung
+      </div>
+
+      <div class="links">
+        <a href="about.html">Über uns</a>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="legal.html">Impressum</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
