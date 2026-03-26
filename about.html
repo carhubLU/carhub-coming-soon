@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About CarHub</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" href="favicon.png">
 
   <style>
     :root {
@@ -18,6 +18,10 @@
       --accent: #2e5f5b;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -27,6 +31,7 @@
     }
 
     .page {
+      position: relative;
       max-width: 900px;
       margin: auto;
       background: var(--surface);
@@ -34,6 +39,24 @@
       padding: 40px;
       border: 1px solid var(--border);
       box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .lang-switch a.active {
+      text-decoration: underline;
     }
 
     a {
@@ -48,35 +71,61 @@
     h1 {
       font-size: 42px;
       margin-bottom: 20px;
+      margin-top: 10px;
     }
 
     p {
       color: var(--text-soft);
       line-height: 1.8;
     }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 56px 18px 28px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .lang-switch {
+        top: 14px;
+        right: 14px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="page">
+    <div class="lang-switch">
+      <a href="about.html" class="active">EN</a>
+      <a href="de/about.html">DE</a>
+      <a href="fr/about.html">FR</a>
+    </div>
+
     <a href="index.html">← Back to home</a>
 
     <h1>About CarHub</h1>
 
     <p>
-      CarHub is a platform that allows drivers to easily book garage services and stay connected to the car world across Luxembourg and the Greater Region.
+      CarHub is a platform designed to simplify how drivers interact with garages and vehicle service providers.
     </p>
 
     <p>
-      Our goal is to simplify the entire experience — from finding the right garage to managing services in a fast and intuitive way.
+      Our goal is to make booking vehicle services fast, transparent, and straightforward, allowing users to find and schedule garage services with ease.
     </p>
 
     <p>
-      CarHub will also bring together local automotive events and relevant information, creating one central place for everything related to your car.
+      In addition to service bookings, CarHub brings together what is happening in the automotive world across Luxembourg and the Greater Region, including events, meet-ups and relevant updates for car enthusiasts.
     </p>
 
     <p>
-      We are currently building the first version of CarHub across mobile and web.
+      By combining practical tools with community-focused content, CarHub aims to become a central hub for drivers, whether they are managing their vehicle or staying connected to the local automotive scene.
+    </p>
+
+    <p>
+      CarHub is currently in development and will be launching soon.
     </p>
   </div>
 </body>
