@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales</title>
+
+  <link rel="icon" href="../favicon.png">
+
+  <style>
+    :root {
+      --bg: #e6efe8;
+      --surface: #f4f8f5;
+      --text: #0f2d2a;
+      --text-soft: #3d5a57;
+      --muted: #6b8a87;
+      --border: rgba(15,45,42,0.12);
+      --accent: #2e5f5b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px;
+    }
+
+    .page {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      background: var(--surface);
+      border-radius: 28px;
+      padding: 40px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .lang-switch a.active {
+      text-decoration: underline;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin-top: 24px;
+    }
+
+    p {
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 56px 18px 28px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .lang-switch {
+        top: 14px;
+        right: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="lang-switch">
+      <a href="../legal.html">EN</a>
+      <a href="../de/legal.html">DE</a>
+      <a href="legal.html" class="active">FR</a>
+    </div>
+
+    <a href="index.html">← Retour à l’accueil</a>
+
+    <h1>Mentions légales</h1>
+
+    <h2>Projet</h2>
+    <p>
+      CarHub est actuellement en cours de développement. Ce site web sert de page d’information provisoire de type coming soon.
+    </p>
+
+    <h2>Responsable du site web</h2>
+    <p>
+      Ce site web est actuellement exploité par le fondateur du projet CarHub. Les informations légales complètes ainsi que les coordonnées de l’entreprise seront ajoutées une fois que la société sera officiellement établie.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      E-mail : contact@carhub.lu
+    </p>
+
+    <h2>Objet du site web</h2>
+    <p>
+      Ce site web a pour but de présenter le projet CarHub. Aucun service commercial, aucune réservation et aucun compte utilisateur ne sont actuellement proposés par l’intermédiaire de cette page.
+    </p>
+
+    <h2>Responsabilité quant au contenu</h2>
+    <p>
+      Le contenu de ce site web a été élaboré avec soin. Toutefois, aucune garantie n’est donnée quant à l’exactitude, l’exhaustivité ou l’actualité des informations.
+    </p>
+
+    <h2>Hébergement</h2>
+    <p>
+      Ce site web est hébergé par Vercel Inc., États-Unis.
+    </p>
+
+    <h2>Note temporaire</h2>
+    <p>
+      Ces mentions légales sont temporaires et seront mises à jour avec les informations complètes de l’entreprise une fois que l’entité CarHub sera officiellement créée.
+    </p>
+  </div>
+</body>
+</html>
