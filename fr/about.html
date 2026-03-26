@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation</title>
+
+  <link rel="icon" href="../favicon.png">
+
+  <style>
+    :root {
+      --bg: #e6efe8;
+      --surface: #f4f8f5;
+      --text: #0f2d2a;
+      --text-soft: #3d5a57;
+      --muted: #6b8a87;
+      --border: rgba(15,45,42,0.12);
+      --accent: #2e5f5b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px;
+    }
+
+    .page {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      background: var(--surface);
+      border-radius: 28px;
+      padding: 40px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .lang-switch a.active {
+      text-decoration: underline;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+
+    p {
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 56px 18px 28px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .lang-switch {
+        top: 14px;
+        right: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="lang-switch">
+      <a href="../about.html">EN</a>
+      <a href="../de/about.html">DE</a>
+      <a href="about.html" class="active">FR</a>
+    </div>
+
+    <a href="index.html">← Retour à l’accueil</a>
+
+    <h1>Présentation</h1>
+
+    <p>
+      CarHub est une plateforme conçue pour simplifier la manière dont les conducteurs interagissent avec les garages et les prestataires de services automobiles.
+    </p>
+
+    <p>
+      Notre objectif est de rendre la réservation de services automobiles simple, rapide et transparente, afin de permettre aux utilisateurs de trouver et de réserver facilement les services de garage dont ils ont besoin.
+    </p>
+
+    <p>
+      En plus des réservations de services, CarHub rassemble ce qui se passe dans le monde automobile au Luxembourg et dans la Grande Région, y compris les événements, les rencontres et les informations pertinentes pour les passionnés d’automobile.
+    </p>
+
+    <p>
+      En combinant des outils pratiques et un contenu tourné vers la communauté, CarHub a pour ambition de devenir un point central pour les conducteurs, qu’il s’agisse de gérer leur véhicule ou de rester connectés à la scène automobile locale.
+    </p>
+
+    <p>
+      CarHub est actuellement en cours de développement et sera bientôt lancé.
+    </p>
+  </div>
+</body>
+</html>
