@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" href="favicon.png">
 
   <style>
     :root {
@@ -18,6 +18,10 @@
       --accent: #2e5f5b;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -27,16 +31,46 @@
     }
 
     .page {
+      position: relative;
       max-width: 900px;
       margin: auto;
       background: var(--surface);
       border-radius: 28px;
       padding: 40px;
       border: 1px solid var(--border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .lang-switch a.active {
+      text-decoration: underline;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     h1 {
       font-size: 40px;
+      margin-top: 10px;
     }
 
     h2 {
@@ -47,32 +81,61 @@
       color: var(--text-soft);
       line-height: 1.8;
     }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 56px 18px 28px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .lang-switch {
+        top: 14px;
+        right: 14px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="page">
+    <div class="lang-switch">
+      <a href="privacy.html" class="active">EN</a>
+      <a href="de/privacy.html">DE</a>
+      <a href="fr/privacy.html">FR</a>
+    </div>
+
     <a href="index.html">← Back to home</a>
 
     <h1>Privacy Policy</h1>
 
     <p>
-      This website currently does not actively collect personal data.
+      This website is operated by CarHub.
+    </p>
+
+    <p>
+      This website is currently a simple coming soon page intended to present the CarHub project. We do not currently collect personal data through forms, account registration or booking features on this page.
     </p>
 
     <h2>Technical data</h2>
     <p>
-      Basic technical information such as IP address and browser type may be processed automatically for security and hosting purposes.
+      Basic technical data such as IP address, browser information, device information and server requests may be processed automatically for hosting, security, performance and website delivery purposes.
     </p>
 
     <h2>Future updates</h2>
     <p>
-      When CarHub introduces accounts, bookings, or analytics, this policy will be updated accordingly.
+      If analytics, cookies, contact forms, newsletters, account registration or booking functionality are added in the future, this privacy policy will be updated accordingly.
     </p>
 
     <h2>Contact</h2>
     <p>
-      contact@carhub.lu
+      For privacy-related questions, you may contact us at: contact@carhub.lu
+    </p>
+
+    <p>
+      Last updated: 22 March 2026
     </p>
   </div>
 </body>
