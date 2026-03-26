@@ -39,6 +39,7 @@
       padding: 40px;
       border: 1px solid var(--border);
       box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
 
     .lang-switch {
@@ -69,8 +70,11 @@
     }
 
     h1 {
-      font-size: 40px;
+      font-size: clamp(28px, 5.2vw, 40px);
+      line-height: 1.12;
       margin-top: 10px;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     h2 {
@@ -88,7 +92,8 @@
       }
 
       h1 {
-        font-size: 34px;
+        font-size: 32px;
+        line-height: 1.14;
       }
 
       .lang-switch {
