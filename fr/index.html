@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CarHub</title>
+  <title>CarHub | Services automobiles et réservations au Luxembourg</title>
 
-  <link rel="icon" href="../favicon.png">
-  <link rel="preload" as="image" href="../logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
 
   <style>
     :root {
@@ -19,9 +18,7 @@
       --accent: #2e5f5b;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -35,38 +32,14 @@
       padding: 24px;
     }
 
-    .container {
-      max-width: 900px;
-      width: 100%;
-      text-align: center;
-    }
+    .container { max-width: 900px; width: 100%; text-align: center; }
 
     .card {
-      position: relative;
       background: var(--surface);
       border-radius: 28px;
       padding: 40px;
       border: 1px solid var(--border);
       box-shadow: 0 20px 60px rgba(0,0,0,0.05);
-      overflow: hidden;
-    }
-
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 14px;
-    }
-
-    .lang-switch a {
-      margin-left: 10px;
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .lang-switch a.active {
-      text-decoration: underline;
     }
 
     .logo {
@@ -78,8 +51,8 @@
     }
 
     h1 {
-      font-size: clamp(32px, 6vw, 56px);
-      line-height: 1.1;
+      font-size: clamp(30px, 5.5vw, 56px);
+      line-height: 1.12;
       margin-bottom: 20px;
     }
 
@@ -104,42 +77,6 @@
       background: #dce8e1;
       border: 1px solid var(--border);
       font-size: 13px;
-      letter-spacing: 0.05em;
-    }
-
-    .links {
-      margin-top: 25px;
-    }
-
-    .links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    .links a:hover,
-    .lang-switch a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      .card {
-        padding: 56px 18px 28px;
-      }
-
-      .logo {
-        max-width: 240px;
-      }
-
-      h1 {
-        font-size: 36px;
-      }
-
-      .lang-switch {
-        top: 14px;
-        right: 14px;
-      }
     }
   </style>
 </head>
@@ -147,33 +84,23 @@
 <body>
   <div class="container">
     <div class="card">
-      <div class="lang-switch">
-        <a href="../index.html">EN</a>
-        <a href="../de/index.html">DE</a>
-        <a href="index.html" class="active">FR</a>
-      </div>
 
-      <img src="../logo.png" class="logo" alt="Logo CarHub" loading="eager" fetchpriority="high" decoding="async">
+      <img src="/logo.png" class="logo">
 
-      <h1>Services automobiles et réservations — en un seul endroit.</h1>
+      <h1>Réservez vos services automobiles en un seul endroit.</h1>
 
       <p class="lead">
-        CarHub est une plateforme qui permet aux conducteurs de réserver facilement une large gamme de services automobiles — y compris garages, detailing, lavages auto, pneus et plus encore — tout en restant connectés à l’univers automobile au Luxembourg et dans la Grande Région.
+        CarHub permet aux conducteurs de réserver facilement une large gamme de services automobiles, notamment garages, detailing, lavages, pneus, protection carrosserie et plus encore.
       </p>
 
       <p class="sub">
-        Nous développons actuellement la première version de CarHub pour mobile et web, avec un accent sur la simplicité, la clarté et une meilleure expérience pour les conducteurs et les prestataires de services.
+        La plateforme permet également de rester connecté à l’univers automobile au Luxembourg et dans la Grande Région. Une première version est actuellement en développement.
       </p>
 
       <div class="status">
-        BIENTÔT DISPONIBLE · Première version en développement
+        BIENTÔT DISPONIBLE · Version en cours de développement
       </div>
 
-      <div class="links">
-        <a href="about.html">Présentation</a>
-        <a href="privacy.html">Confidentialité</a>
-        <a href="legal.html">Mentions légales</a>
-      </div>
     </div>
   </div>
 </body>
