@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum</title>
+
+  <link rel="icon" href="../favicon.png">
+
+  <style>
+    :root {
+      --bg: #e6efe8;
+      --surface: #f4f8f5;
+      --text: #0f2d2a;
+      --text-soft: #3d5a57;
+      --muted: #6b8a87;
+      --border: rgba(15,45,42,0.12);
+      --accent: #2e5f5b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px;
+    }
+
+    .page {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      background: var(--surface);
+      border-radius: 28px;
+      padding: 40px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .lang-switch a.active {
+      text-decoration: underline;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin-top: 24px;
+    }
+
+    p {
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 56px 18px 28px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .lang-switch {
+        top: 14px;
+        right: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="lang-switch">
+      <a href="../legal.html">EN</a>
+      <a href="legal.html" class="active">DE</a>
+      <a href="../fr/legal.html">FR</a>
+    </div>
+
+    <a href="index.html">← Zur Startseite</a>
+
+    <h1>Impressum</h1>
+
+    <h2>Projekt</h2>
+    <p>
+      CarHub befindet sich derzeit in der Entwicklung. Diese Website dient als vorläufige informative Coming-Soon-Seite.
+    </p>
+
+    <h2>Verantwortlich für diese Website</h2>
+    <p>
+      Diese Website wird derzeit vom Gründer des CarHub-Projekts betrieben. Vollständige rechtliche Angaben und Unternehmensdaten werden ergänzt, sobald das Unternehmen offiziell gegründet ist.
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: contact@carhub.lu
+    </p>
+
+    <h2>Zweck der Website</h2>
+    <p>
+      Diese Website dient der Vorstellung des CarHub-Projekts. Über diese Seite werden derzeit keine kommerziellen Dienstleistungen, Buchungen oder Benutzerkonten angeboten.
+    </p>
+
+    <h2>Haftung für Inhalte</h2>
+    <p>
+      Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Es wird jedoch keine Gewähr für die Richtigkeit, Vollständigkeit oder Aktualität der Informationen übernommen.
+    </p>
+
+    <h2>Hosting</h2>
+    <p>
+      Diese Website wird von Vercel Inc., USA, gehostet.
+    </p>
+
+    <h2>Vorläufiger Hinweis</h2>
+    <p>
+      Dieses Impressum ist vorläufig und wird mit den vollständigen Unternehmensangaben aktualisiert, sobald die CarHub-Gesellschaft offiziell gegründet ist.
+    </p>
+  </div>
+</body>
+</html>
