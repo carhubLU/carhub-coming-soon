@@ -19,9 +19,7 @@
       --accent: #2e5f5b;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -86,14 +84,14 @@
     .lead {
       font-size: 18px;
       color: var(--text-soft);
-      line-height: 1.7;
-      margin-bottom: 20px;
+      line-height: 1.6;
+      margin-bottom: 15px;
     }
 
     .sub {
       font-size: 15px;
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.6;
       margin-bottom: 30px;
     }
 
@@ -104,7 +102,6 @@
       background: #dce8e1;
       border: 1px solid var(--border);
       font-size: 13px;
-      letter-spacing: 0.05em;
     }
 
     .links {
@@ -118,28 +115,11 @@
       font-weight: 500;
     }
 
-    .links a:hover,
-    .lang-switch a:hover {
-      text-decoration: underline;
-    }
-
     @media (max-width: 600px) {
-      .card {
-        padding: 56px 18px 28px;
-      }
-
-      .logo {
-        max-width: 240px;
-      }
-
-      h1 {
-        font-size: 36px;
-      }
-
-      .lang-switch {
-        top: 14px;
-        right: 14px;
-      }
+      .card { padding: 56px 18px 28px; }
+      .logo { max-width: 240px; }
+      h1 { font-size: 36px; }
+      .lang-switch { top: 14px; right: 14px; }
     }
   </style>
 </head>
@@ -147,22 +127,23 @@
 <body>
   <div class="container">
     <div class="card">
+
       <div class="lang-switch">
         <a href="/index.html" class="active">EN</a>
         <a href="/de/index.html">DE</a>
         <a href="/fr/index.html">FR</a>
       </div>
 
-      <img src="logo.png" class="logo" alt="CarHub logo" loading="eager" fetchpriority="high" decoding="async">
+      <img src="logo.png" class="logo" alt="CarHub logo">
 
       <h1>Book vehicle services and discover car events in one place.</h1>
 
       <p class="lead">
-        CarHub helps drivers easily find and book a wide range of vehicle services, from garages and tyre changes to detailing, car care and more, while also staying connected to the car scene across Luxembourg and the Greater Region.
+        CarHub helps drivers find and book vehicle services while staying connected to the car scene in Luxembourg and the Greater Region.
       </p>
 
       <p class="sub">
-        We are currently building the first version of CarHub across mobile and web, with a focus on simplicity, clarity and a better experience for drivers and service providers.
+        Garages, tyres, detailing, car care and more. One simple platform for mobile and web.
       </p>
 
       <div class="status">
@@ -174,6 +155,7 @@
         <a href="privacy.html">Privacy</a>
         <a href="legal.html">Legal</a>
       </div>
+
     </div>
   </div>
 </body>
