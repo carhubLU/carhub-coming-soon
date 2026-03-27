@@ -6,7 +6,6 @@
   <title>CarHub | Vehicle services and car events in Luxembourg</title>
 
   <link rel="icon" href="favicon.png">
-  <link rel="preload" as="image" href="logo.png">
 
   <style>
     :root {
@@ -25,7 +24,6 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background: var(--bg);
-      color: var(--text);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -33,66 +31,49 @@
       padding: 24px;
     }
 
-    .container {
+    .card {
+      position: relative;
       max-width: 900px;
       width: 100%;
       text-align: center;
-    }
-
-    .card {
-      position: relative;
       background: var(--surface);
       border-radius: 28px;
       padding: 40px;
       border: 1px solid var(--border);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.05);
-      overflow: hidden;
     }
 
     .lang-switch {
       position: absolute;
       top: 20px;
       right: 20px;
-      font-size: 14px;
     }
 
     .lang-switch a {
       margin-left: 12px;
       text-decoration: none;
       color: var(--accent);
-      font-weight: 600;
-    }
-
-    .lang-switch a.active {
-      text-decoration: underline;
+      font-weight: bold;
     }
 
     .logo {
       max-width: 320px;
       width: 100%;
-      margin: 0 auto 30px auto;
-      display: block;
-      border-radius: 20px;
+      margin-bottom: 30px;
     }
 
     h1 {
       font-size: clamp(32px, 6vw, 56px);
-      line-height: 1.1;
       margin-bottom: 20px;
     }
 
     .lead {
-      font-size: 18px;
       color: var(--text-soft);
-      line-height: 1.6;
       margin-bottom: 15px;
     }
 
     .sub {
-      font-size: 15px;
       color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .status {
@@ -102,61 +83,48 @@
       background: #dce8e1;
       border: 1px solid var(--border);
       font-size: 13px;
-    }
-
-    .links {
-      margin-top: 25px;
+      margin-bottom: 20px;
     }
 
     .links a {
       margin: 0 10px;
       text-decoration: none;
       color: var(--accent);
-      font-weight: 500;
-    }
-
-    @media (max-width: 600px) {
-      .card { padding: 56px 18px 28px; }
-      .logo { max-width: 240px; }
-      h1 { font-size: 36px; }
-      .lang-switch { top: 14px; right: 14px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
+  <div class="card">
 
-      <div class="lang-switch">
-        <a href="/index.html" class="active">EN</a>
-        <a href="/de/index.html">DE</a>
-        <a href="/fr/index.html">FR</a>
-      </div>
-
-      <img src="logo.png" class="logo" alt="CarHub logo">
-
-      <h1>Book vehicle services and discover car events in one place.</h1>
-
-      <p class="lead">
-        CarHub helps drivers find and book vehicle services while staying connected to the car scene in Luxembourg and the Greater Region.
-      </p>
-
-      <p class="sub">
-        Garages, tyres, detailing, car care and more. One simple platform for mobile and web.
-      </p>
-
-      <div class="status">
-        COMING SOON · Early version in development
-      </div>
-
-      <div class="links">
-        <a href="about.html">About</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="legal.html">Legal</a>
-      </div>
-
+    <div class="lang-switch">
+      <a href="/index.html">EN</a>
+      <a href="/de/index.html">DE</a>
+      <a href="/fr/index.html">FR</a>
     </div>
+
+    <img src="logo.png" class="logo">
+
+    <h1>Book vehicle services and discover car events in one place.</h1>
+
+    <p class="lead">
+      CarHub helps drivers find and book vehicle services while staying connected to the car scene in Luxembourg and the Greater Region.
+    </p>
+
+    <p class="sub">
+      Garages, tyres, detailing, car care and more. One simple platform.
+    </p>
+
+    <div class="status">
+      COMING SOON · Early version in development
+    </div>
+
+    <div class="links">
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="legal.html">Legal</a>
+    </div>
+
   </div>
 </body>
 </html>
