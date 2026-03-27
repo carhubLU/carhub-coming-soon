@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CarHub | Vehicle services and bookings in Luxembourg</title>
+  <title>CarHub | Vehicle services and car events in Luxembourg</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" href="favicon.png">
+  <link rel="preload" as="image" href="logo.png">
 
   <style>
     :root {
@@ -18,7 +19,9 @@
       --accent: #2e5f5b;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -39,11 +42,31 @@
     }
 
     .card {
+      position: relative;
       background: var(--surface);
       border-radius: 28px;
       padding: 40px;
       border: 1px solid var(--border);
       box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      margin-left: 12px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .lang-switch a.active {
+      text-decoration: underline;
     }
 
     .logo {
@@ -95,10 +118,28 @@
       font-weight: 500;
     }
 
+    .links a:hover,
+    .lang-switch a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 600px) {
-      .card { padding: 28px 18px; }
-      .logo { max-width: 240px; }
-      h1 { font-size: 36px; }
+      .card {
+        padding: 56px 18px 28px;
+      }
+
+      .logo {
+        max-width: 240px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .lang-switch {
+        top: 14px;
+        right: 14px;
+      }
     }
   </style>
 </head>
@@ -106,17 +147,22 @@
 <body>
   <div class="container">
     <div class="card">
+      <div class="lang-switch">
+        <a href="/index.html" class="active">EN</a>
+        <a href="/de/index.html">DE</a>
+        <a href="/fr/index.html">FR</a>
+      </div>
 
-      <img src="logo.png" class="logo" alt="CarHub logo">
+      <img src="logo.png" class="logo" alt="CarHub logo" loading="eager" fetchpriority="high" decoding="async">
 
-      <h1>Book vehicle services in one place.</h1>
+      <h1>Book vehicle services and discover car events in one place.</h1>
 
       <p class="lead">
-        CarHub helps drivers easily book a wide range of vehicle services, including garages, detailing, car washes, tyre services, paint protection film and more, while staying connected to the automotive scene across Luxembourg and the Greater Region.
+        CarHub helps drivers easily find and book a wide range of vehicle services, from garages and tyre changes to detailing, car care and more, while also staying connected to the car scene across Luxembourg and the Greater Region.
       </p>
 
       <p class="sub">
-        We are currently building the first version of CarHub across mobile and web, focused on simplicity, clarity and a better experience for drivers and service providers.
+        We are currently building the first version of CarHub across mobile and web, with a focus on simplicity, clarity and a better experience for drivers and service providers.
       </p>
 
       <div class="status">
@@ -124,10 +170,10 @@
       </div>
 
       <div class="links">
-        <a href="/de/index.html">DE</a>
-        <a href="/fr/index.html">FR</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="legal.html">Legal</a>
       </div>
-
     </div>
   </div>
 </body>
