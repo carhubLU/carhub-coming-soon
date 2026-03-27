@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CarHub | Fahrzeugservices und Buchungen in Luxemburg</title>
+  <title>CarHub | Fahrzeugservices und Auto-Events in Luxemburg</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" href="../favicon.png">
+  <link rel="preload" as="image" href="../logo.png">
 
   <style>
     :root {
@@ -18,7 +19,9 @@
       --accent: #2e5f5b;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -32,14 +35,38 @@
       padding: 24px;
     }
 
-    .container { max-width: 900px; width: 100%; text-align: center; }
+    .container {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
 
     .card {
+      position: relative;
       background: var(--surface);
       border-radius: 28px;
       padding: 40px;
       border: 1px solid var(--border);
       box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      margin-left: 12px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .lang-switch a.active {
+      text-decoration: underline;
     }
 
     .logo {
@@ -79,10 +106,43 @@
       background: #dce8e1;
       border: 1px solid var(--border);
       font-size: 13px;
+      letter-spacing: 0.05em;
+    }
+
+    .links {
+      margin-top: 25px;
+    }
+
+    .links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .links a:hover,
+    .lang-switch a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 32px; line-height: 1.14; }
+      .card {
+        padding: 56px 18px 28px;
+      }
+
+      .logo {
+        max-width: 240px;
+      }
+
+      h1 {
+        font-size: 32px;
+        line-height: 1.14;
+      }
+
+      .lang-switch {
+        top: 14px;
+        right: 14px;
+      }
     }
   </style>
 </head>
@@ -90,23 +150,33 @@
 <body>
   <div class="container">
     <div class="card">
+      <div class="lang-switch">
+        <a href="/index.html">EN</a>
+        <a href="/de/index.html" class="active">DE</a>
+        <a href="/fr/index.html">FR</a>
+      </div>
 
-      <img src="/logo.png" class="logo">
+      <img src="../logo.png" class="logo" alt="CarHub logo" loading="eager" fetchpriority="high" decoding="async">
 
-      <h1>Fahrzeugservices einfach an einem Ort buchen.</h1>
+      <h1>Fahrzeugservices buchen und Auto-Events entdecken an einem Ort.</h1>
 
       <p class="lead">
-        CarHub hilft Fahrern dabei, eine breite Palette an Fahrzeugservices einfach zu buchen, darunter Werkstätten, Fahrzeugaufbereitung, Waschanlagen, Reifenservices, Lackschutzfolie und mehr.
+        CarHub hilft Fahrern dabei, verschiedenste Fahrzeugservices einfach zu finden und zu buchen, von Werkstätten und Reifenwechseln bis hin zu Fahrzeugaufbereitung, Autopflege und mehr, und gleichzeitig mit der Automobilwelt in Luxemburg und der Großregion verbunden zu bleiben.
       </p>
 
       <p class="sub">
-        Gleichzeitig bleiben Nutzer mit der Automobilwelt in Luxemburg und der Großregion verbunden. Wir entwickeln derzeit die erste Version für Mobile und Web.
+        Wir entwickeln derzeit die erste Version von CarHub für Mobile und Web, mit Fokus auf Einfachheit, Klarheit und ein besseres Nutzererlebnis für Fahrer und Dienstleister.
       </p>
 
       <div class="status">
         BALD VERFÜGBAR · Erste Version in Entwicklung
       </div>
 
+      <div class="links">
+        <a href="about.html">Über uns</a>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="legal.html">Impressum</a>
+      </div>
     </div>
   </div>
 </body>
