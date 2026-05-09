@@ -6,17 +6,15 @@
   <title>CarHub | Vehicle services and car events in Luxembourg</title>
 
   <link rel="icon" href="favicon.png">
-  <link rel="preload" as="image" href="logo.png">
+  <link rel="preload" as="image" href="logo-transparent.png">
   <link rel="preload" as="image" href="app-preview.jpeg">
 
   <style>
     :root {
-      --bg: #f7f8f4;
-      --surface: #ffffff;
+      --bg: #f3f5f2;
       --text: #082f34;
       --soft: #526769;
       --muted: #839293;
-      --accent: #007985;
       --accent-dark: #005d66;
       --line: rgba(8,47,52,0.10);
       --mint: #e4f0ea;
@@ -28,7 +26,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, #fbfaf4 0%, var(--bg) 100%);
+      background: linear-gradient(180deg, #fcfcf9 0%, var(--bg) 100%);
       min-height: 100vh;
       padding: 28px;
     }
@@ -46,10 +44,7 @@
     }
 
     .brand img {
-      width: 74px;
-      height: 74px;
-      object-fit: cover;
-      border-radius: 18px;
+      width: 86px;
       display: block;
     }
 
@@ -117,8 +112,6 @@
 
     .status {
       display: inline-flex;
-      align-items: center;
-      justify-content: center;
       background: var(--text);
       color: white;
       border-radius: 999px;
@@ -130,8 +123,6 @@
 
     .button {
       display: inline-flex;
-      align-items: center;
-      justify-content: center;
       border: 1px solid var(--line);
       background: white;
       color: var(--accent-dark);
@@ -143,7 +134,7 @@
     }
 
     .preview {
-      background: #e7f0eb;
+      background: #f1f4f1;
       border: 1px solid var(--line);
       border-radius: 36px;
       padding: 14px;
@@ -184,17 +175,12 @@
     }
 
     @media (max-width: 900px) {
-      body {
-        padding: 18px;
-      }
+      body { padding: 18px; }
 
-      .nav {
-        margin-bottom: 34px;
-      }
+      .nav { margin-bottom: 34px; }
 
       .brand img {
-        width: 62px;
-        height: 62px;
+        width: 78px;
       }
 
       .hero {
@@ -230,7 +216,7 @@
   <main class="page">
     <nav class="nav">
       <a class="brand" href="/">
-        <img src="logo.png" alt="CarHub logo">
+        <img src="logo-transparent.png" alt="CarHub logo">
       </a>
 
       <div class="lang">
