@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | CarHub</title>
+
   <link rel="icon" href="favicon.png">
 
   <style>
     :root {
-      --bg: #f6f7f3;
+      --bg: #f7f8f4;
       --surface: #ffffff;
-      --text: #092f34;
-      --text-soft: #4d6265;
+      --text: #082f34;
+      --soft: #526769;
       --accent-dark: #005d66;
-      --border: rgba(9,47,52,0.10);
+      --line: rgba(8,47,52,0.10);
+      --mint: #e4f0ea;
     }
 
     * { box-sizing: border-box; }
@@ -21,38 +23,50 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #f6f7f3 0%, #edf4ef 100%);
       color: var(--text);
-      padding: 24px;
+      background: linear-gradient(180deg, #fbfaf4 0%, var(--bg) 100%);
+      min-height: 100vh;
+      padding: 28px;
     }
 
-    .page { max-width: 980px; margin: 0 auto; }
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+    }
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-bottom: 28px;
+      justify-content: space-between;
+      margin-bottom: 56px;
     }
 
-    .brand img { width: 120px; border-radius: 14px; display: block; }
+    .brand img {
+      width: 74px;
+      height: 74px;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+    }
 
-    .lang-switch a {
-      margin-left: 14px;
-      text-decoration: none;
+    .lang a {
       color: var(--accent-dark);
-      font-weight: 700;
+      text-decoration: none;
       font-size: 14px;
+      font-weight: 700;
+      margin-left: 16px;
     }
 
-    .lang-switch a.active { text-decoration: underline; }
+    .lang a.active {
+      text-decoration: underline;
+    }
 
     .card {
       background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 34px;
-      padding: 46px;
-      box-shadow: 0 24px 70px rgba(9,47,52,0.08);
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      padding: 52px;
+      box-shadow: 0 24px 70px rgba(8,47,52,0.08);
     }
 
     .back {
@@ -60,33 +74,46 @@
       margin-bottom: 28px;
       color: var(--accent-dark);
       text-decoration: none;
+      font-weight: 800;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent-dark);
+      background: var(--mint);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 13px;
       font-weight: 700;
+      margin-bottom: 22px;
     }
 
     h1 {
-      font-size: clamp(36px, 6vw, 60px);
-      line-height: 1.05;
-      margin: 0 0 24px;
-      letter-spacing: -0.04em;
+      font-size: clamp(38px, 6vw, 62px);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      margin: 0 0 26px;
     }
 
     h2 {
-      margin-top: 30px;
+      margin: 34px 0 12px;
       font-size: 22px;
     }
 
     p {
-      color: var(--text-soft);
+      color: var(--soft);
       font-size: 17px;
       line-height: 1.75;
       margin: 0 0 16px;
+      max-width: 760px;
     }
 
     @media (max-width: 700px) {
-      body { padding: 16px; }
-      .brand img { width: 92px; }
-      .card { padding: 30px 22px; border-radius: 28px; }
-      h1 { font-size: 38px; }
+      body { padding: 18px; }
+      .nav { margin-bottom: 34px; }
+      .brand img { width: 62px; height: 62px; }
+      .card { padding: 32px 22px; border-radius: 30px; }
+      h1 { font-size: 40px; }
     }
   </style>
 </head>
@@ -98,7 +125,7 @@
         <img src="logo.png" alt="CarHub logo">
       </a>
 
-      <div class="lang-switch">
+      <div class="lang">
         <a href="/privacy.html" class="active">EN</a>
         <a href="/de/privacy.html">DE</a>
         <a href="/fr/privacy.html">FR</a>
@@ -107,6 +134,8 @@
 
     <section class="card">
       <a class="back" href="index.html">← Back to home</a>
+
+      <div class="eyebrow">Privacy</div>
 
       <h1>Privacy Policy</h1>
 
