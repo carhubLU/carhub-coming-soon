@@ -6,76 +6,223 @@
   <title>CarHub | Services automobiles et événements auto au Luxembourg</title>
 
   <link rel="icon" href="../favicon.png">
+  <link rel="preload" as="image" href="../logo-transparent.png">
+  <link rel="preload" as="image" href="../app-preview-fr.jpeg">
 
   <style>
+    :root {
+      --bg: #f3f5f2;
+      --text: #082f34;
+      --soft: #526769;
+      --muted: #839293;
+      --accent-dark: #005d66;
+      --line: rgba(8,47,52,0.10);
+      --mint: #e4f0ea;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #e6efe8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      color: var(--text);
+      background: linear-gradient(180deg, #fcfcf9 0%, var(--bg) 100%);
       min-height: 100vh;
+      padding: 28px;
     }
 
-    .card {
-      position: relative;
-      max-width: 900px;
-      text-align: center;
-      background: #f4f8f5;
-      border-radius: 28px;
-      padding: 40px;
+    .page { max-width: 1120px; margin: 0 auto; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 56px;
     }
 
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+    .brand img {
+      width: 86px;
+      display: block;
+      mix-blend-mode: multiply;
     }
 
-    .logo {
-      max-width: 320px;
-      margin-bottom: 30px;
+    .lang a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      margin-left: 16px;
+    }
+
+    .lang a.active { text-decoration: underline; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent-dark);
+      background: var(--mint);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      margin: 0 0 22px;
+      max-width: 720px;
+    }
+
+    .lead {
+      max-width: 600px;
+      color: var(--soft);
+      font-size: 19px;
+      line-height: 1.65;
+      margin: 0 0 14px;
+    }
+
+    .sub {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+      margin: 0 0 30px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
     }
 
     .status {
-      margin: 20px 0;
-      font-size: 13px;
+      display: inline-flex;
+      background: var(--text);
+      color: white;
+      border-radius: 999px;
+      padding: 12px 17px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .button {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--accent-dark);
+      border-radius: 999px;
+      padding: 12px 17px;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .preview {
+      background: #f1f4f1;
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      padding: 14px;
+      box-shadow: 0 24px 70px rgba(8,47,52,0.10);
+    }
+
+    .preview-frame {
+      height: 600px;
+      border-radius: 28px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 12px 40px rgba(8,47,52,0.12);
+    }
+
+    .preview-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .links {
+      margin-top: 42px;
+    }
+
+    .links a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 800;
+      margin-right: 22px;
+    }
+
+    @media (max-width: 900px) {
+      body { padding: 18px; }
+      .nav { margin-bottom: 34px; }
+      .brand img { width: 78px; }
+      .hero { grid-template-columns: 1fr; gap: 34px; }
+      h1 { font-size: 38px; }
+      .lead { font-size: 17px; }
+      .preview { max-width: 330px; margin: 0 auto; }
+      .preview-frame { height: 520px; }
+      .links { margin-top: 34px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="card">
+  <main class="page">
+    <nav class="nav">
+      <a class="brand" href="/fr/">
+        <img src="../logo-transparent.png" alt="Logo CarHub">
+      </a>
 
-    <div class="lang-switch">
-      <a href="/index.html">EN</a>
-      <a href="/de/index.html">DE</a>
-      <a href="/fr/index.html">FR</a>
-    </div>
+      <div class="lang">
+        <a href="/index.html">EN</a>
+        <a href="/de/index.html">DE</a>
+        <a href="/fr/index.html" class="active">FR</a>
+      </div>
+    </nav>
 
-    <img src="../logo.png" class="logo">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Luxembourg</div>
 
-    <h1>Réservez des services automobiles et découvrez des événements auto.</h1>
+        <h1>Services automobiles et événements auto, simplifiés.</h1>
 
-    <p>
-      CarHub aide à trouver et réserver facilement des services automobiles.
-    </p>
+        <p class="lead">
+          CarHub aide les conducteurs à trouver et réserver des services automobiles tout en restant connectés à la scène auto locale.
+        </p>
 
-    <p>
-      Garages, pneus, detailing et plus.
-    </p>
+        <p class="sub">
+          Garages, pneus, detailing, entretien auto et événements. Une plateforme simple sur mobile et web.
+        </p>
 
-    <div class="status">
-      BIENTÔT DISPONIBLE · Version en développement
-    </div>
+        <div class="actions">
+          <div class="status">BIENTÔT DISPONIBLE</div>
+          <a class="button" href="about.html">En savoir plus</a>
+        </div>
+      </div>
 
-    <div>
+      <aside class="preview">
+        <div class="preview-frame">
+          <img src="../app-preview-fr.jpeg" alt="Aperçu de l’application CarHub">
+        </div>
+      </aside>
+    </section>
+
+    <div class="links">
       <a href="about.html">Présentation</a>
       <a href="privacy.html">Confidentialité</a>
       <a href="legal.html">Mentions légales</a>
     </div>
-
-  </div>
+  </main>
 </body>
 </html>
