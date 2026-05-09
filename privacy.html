@@ -1,3 +1,5 @@
+<!-- privacy.html -->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
 
   <style>
     :root {
-      --bg: #f7f8f4;
+      --bg: #f3f5f2;
       --surface: #ffffff;
       --text: #082f34;
       --soft: #526769;
@@ -24,7 +26,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, #fbfaf4 0%, var(--bg) 100%);
+      background: linear-gradient(180deg, #fcfcf9 0%, var(--bg) 100%);
       min-height: 100vh;
       padding: 28px;
     }
@@ -42,11 +44,9 @@
     }
 
     .brand img {
-      width: 74px;
-      height: 74px;
-      object-fit: cover;
-      border-radius: 18px;
+      width: 86px;
       display: block;
+      mix-blend-mode: multiply;
     }
 
     .lang a {
@@ -110,19 +110,31 @@
 
     @media (max-width: 700px) {
       body { padding: 18px; }
+
       .nav { margin-bottom: 34px; }
-      .brand img { width: 62px; height: 62px; }
-      .card { padding: 32px 22px; border-radius: 30px; }
-      h1 { font-size: 40px; }
+
+      .brand img {
+        width: 78px;
+      }
+
+      .card {
+        padding: 32px 22px;
+        border-radius: 30px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
     }
   </style>
 </head>
 
 <body>
   <main class="page">
+
     <nav class="nav">
       <a class="brand" href="/">
-        <img src="logo.png" alt="CarHub logo">
+        <img src="logo-transparent.png" alt="CarHub logo">
       </a>
 
       <div class="lang">
@@ -133,6 +145,7 @@
     </nav>
 
     <section class="card">
+
       <a class="back" href="index.html">← Back to home</a>
 
       <div class="eyebrow">Privacy</div>
@@ -144,27 +157,32 @@
       </p>
 
       <p>
-        This website is currently a simple coming soon page. We do not currently collect personal data through forms, user accounts or booking features on this page.
+        This website currently serves as a simple coming soon page. We do not currently collect personal data through forms, user accounts or booking functions on this website.
       </p>
 
       <h2>Technical data</h2>
+
       <p>
         Basic technical data such as IP address, browser information, device information and server requests may be processed automatically for hosting, security, performance and website delivery.
       </p>
 
       <h2>Future updates</h2>
+
       <p>
-        If analytics, cookies, contact forms, newsletters, accounts or booking features are added in the future, this privacy policy will be updated accordingly.
+        If cookies, analytics, accounts, booking systems or contact forms are added in the future, this privacy policy will be updated accordingly.
       </p>
 
       <h2>Contact</h2>
+
       <p>
-        For privacy-related questions, contact: contact@carhub.lu
+        For privacy-related questions:
+        contact@carhub.lu
       </p>
 
       <p>
-        Last updated: 22 March 2026
+        Last updated: 08 May 2026
       </p>
+
     </section>
   </main>
 </body>
