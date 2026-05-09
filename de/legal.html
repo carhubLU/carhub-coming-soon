@@ -3,153 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum</title>
-
+  <title>Impressum | CarHub</title>
   <link rel="icon" href="../favicon.png">
 
   <style>
     :root {
-      --bg: #e6efe8;
-      --surface: #f4f8f5;
-      --text: #0f2d2a;
-      --text-soft: #3d5a57;
-      --muted: #6b8a87;
-      --border: rgba(15,45,42,0.12);
-      --accent: #2e5f5b;
+      --bg: #f3f5f2;
+      --surface: #ffffff;
+      --text: #082f34;
+      --soft: #526769;
+      --accent-dark: #005d66;
+      --line: rgba(8,47,52,0.10);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: var(--bg);
       color: var(--text);
-      padding: 24px;
+      background: linear-gradient(180deg, #fcfcf9 0%, var(--bg) 100%);
+      min-height: 100vh;
+      padding: 28px;
     }
 
-    .page {
-      position: relative;
-      max-width: 900px;
-      margin: auto;
-      background: var(--surface);
-      border-radius: 28px;
-      padding: 40px;
-      border: 1px solid var(--border);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.05);
-      overflow: hidden;
+    .page { max-width: 980px; margin: 0 auto; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 56px;
     }
 
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+    .brand img {
+      width: 86px;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+
+    .lang a {
+      color: var(--accent-dark);
+      text-decoration: none;
       font-size: 14px;
+      font-weight: 700;
+      margin-left: 16px;
     }
 
-    .lang-switch a {
-      margin-left: 10px;
+    .lang a.active { text-decoration: underline; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      padding: 52px;
+      box-shadow: 0 24px 70px rgba(8,47,52,0.08);
+    }
+
+    .back {
+      display: inline-block;
+      color: var(--soft);
       text-decoration: none;
-      color: var(--accent);
+      font-size: 14px;
       font-weight: 600;
-    }
-
-    .lang-switch a.active {
-      text-decoration: underline;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      opacity: 0.9;
     }
 
     h1 {
-      font-size: clamp(28px, 5.2vw, 40px);
-      line-height: 1.12;
-      margin-top: 10px;
-      overflow-wrap: break-word;
-      hyphens: auto;
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      margin: 18px 0 26px;
     }
 
     h2 {
-      margin-top: 24px;
+      margin: 34px 0 12px;
+      font-size: 22px;
     }
 
     p {
-      color: var(--text-soft);
-      line-height: 1.8;
+      color: var(--soft);
+      font-size: 17px;
+      line-height: 1.75;
+      margin: 0 0 16px;
+      max-width: 760px;
     }
 
-    @media (max-width: 600px) {
-      .page {
-        padding: 56px 18px 28px;
-      }
-
-      h1 {
-        font-size: 32px;
-        line-height: 1.14;
-      }
-
-      .lang-switch {
-        top: 14px;
-        right: 14px;
-      }
+    @media (max-width: 700px) {
+      body { padding: 18px; }
+      .nav { margin-bottom: 34px; }
+      .brand img { width: 78px; mix-blend-mode: multiply; }
+      .card { padding: 32px 22px; border-radius: 30px; }
+      h1 { font-size: 36px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <div class="lang-switch">
-      <a href="../legal.html">EN</a>
-      <a href="legal.html" class="active">DE</a>
-      <a href="../fr/legal.html">FR</a>
-    </div>
+  <main class="page">
+    <nav class="nav">
+      <a class="brand" href="/de/">
+        <img src="../logo-transparent.png" alt="CarHub logo">
+      </a>
 
-    <a href="index.html">← Zur Startseite</a>
+      <div class="lang">
+        <a href="/legal.html">EN</a>
+        <a href="/de/legal.html" class="active">DE</a>
+        <a href="/fr/legal.html">FR</a>
+      </div>
+    </nav>
 
-    <h1>Impressum</h1>
+    <section class="card">
+      <a class="back" href="index.html">← Startseite</a>
 
-    <h2>Projekt</h2>
-    <p>
-      CarHub befindet sich derzeit in der Entwicklung. Diese Website dient als vorläufige informative Coming-Soon-Seite.
-    </p>
+      <h1>Impressum</h1>
 
-    <h2>Verantwortlich für diese Website</h2>
-    <p>
-      Diese Website wird derzeit vom Gründer des CarHub-Projekts betrieben. Vollständige rechtliche Angaben und Unternehmensdaten werden ergänzt, sobald das Unternehmen offiziell gegründet ist.
-    </p>
+      <h2>Projektstatus</h2>
+      <p>
+        CarHub befindet sich derzeit in Entwicklung. Diese Website dient als vorläufige Coming-Soon-Informationsseite.
+      </p>
 
-    <h2>Kontakt</h2>
-    <p>
-      E-Mail: contact@carhub.lu
-    </p>
+      <h2>Verantwortung für diese Website</h2>
+      <p>
+        Diese Website wird derzeit vom Gründer des CarHub-Projekts betrieben. Vollständige Unternehmens- und Rechtsangaben werden ergänzt, sobald das Unternehmen offiziell gegründet ist.
+      </p>
 
-    <h2>Zweck der Website</h2>
-    <p>
-      Diese Website dient der Vorstellung des CarHub-Projekts. Über diese Seite werden derzeit keine kommerziellen Dienstleistungen, Buchungen oder Benutzerkonten angeboten.
-    </p>
+      <h2>Kontakt</h2>
+      <p>
+        contact@carhub.lu
+      </p>
 
-    <h2>Haftung für Inhalte</h2>
-    <p>
-      Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Es wird jedoch keine Gewähr für die Richtigkeit, Vollständigkeit oder Aktualität der Informationen übernommen.
-    </p>
+      <h2>Zweck der Website</h2>
+      <p>
+        Diese Website dient der Vorstellung des CarHub-Projekts. Über diese Seite werden derzeit keine kommerziellen Buchungen, Zahlungen oder Benutzerkonten angeboten.
+      </p>
 
-    <h2>Hosting</h2>
-    <p>
-      Diese Website wird von Vercel Inc., USA, gehostet.
-    </p>
+      <h2>Hosting</h2>
+      <p>
+        Diese Website wird von Vercel Inc., USA, gehostet.
+      </p>
 
-    <h2>Vorläufiger Hinweis</h2>
-    <p>
-      Dieses Impressum ist vorläufig und wird mit den vollständigen Unternehmensangaben aktualisiert, sobald die CarHub-Gesellschaft offiziell gegründet ist.
-    </p>
-  </div>
+      <h2>Vorläufiger Hinweis</h2>
+      <p>
+        Dieses Impressum ist vorläufig und wird mit vollständigen Unternehmensangaben aktualisiert, sobald CarHub offiziell gestartet ist.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
