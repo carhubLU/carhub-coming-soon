@@ -15,7 +15,6 @@
       --soft: #526769;
       --accent-dark: #005d66;
       --line: rgba(8,47,52,0.10);
-      --mint: #e4f0ea;
     }
 
     * { box-sizing: border-box; }
@@ -69,28 +68,22 @@
 
     .back {
       display: inline-block;
-      margin-bottom: 28px;
-      color: var(--accent-dark);
+      color: var(--soft);
       text-decoration: none;
-      font-weight: 800;
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0.9;
     }
 
-    .eyebrow {
-      display: inline-block;
-      color: var(--accent-dark);
-      background: var(--mint);
-      padding: 9px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 22px;
+    .back:hover {
+      opacity: 1;
     }
 
     h1 {
       font-size: clamp(38px, 6vw, 62px);
       line-height: 1.03;
       letter-spacing: -0.045em;
-      margin: 0 0 26px;
+      margin: 18px 0 26px;
     }
 
     p {
@@ -104,7 +97,7 @@
     @media (max-width: 700px) {
       body { padding: 18px; }
       .nav { margin-bottom: 34px; }
-      .brand img { width: 78px; }
+      .brand img { width: 78px; mix-blend-mode: multiply; }
       .card { padding: 32px 22px; border-radius: 30px; }
       h1 { font-size: 40px; }
     }
@@ -126,9 +119,7 @@
     </nav>
 
     <section class="card">
-      <a class="back" href="index.html">← Back to home</a>
-
-      <div class="eyebrow">About</div>
+      <a class="back" href="index.html">← Home</a>
 
       <h1>A simpler way to connect drivers with vehicle services.</h1>
 
