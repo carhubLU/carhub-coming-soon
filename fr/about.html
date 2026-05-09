@@ -3,131 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Présentation</title>
-
+  <title>Présentation | CarHub</title>
   <link rel="icon" href="../favicon.png">
 
   <style>
     :root {
-      --bg: #e6efe8;
-      --surface: #f4f8f5;
-      --text: #0f2d2a;
-      --text-soft: #3d5a57;
-      --muted: #6b8a87;
-      --border: rgba(15,45,42,0.12);
-      --accent: #2e5f5b;
+      --bg: #f3f5f2;
+      --surface: #ffffff;
+      --text: #082f34;
+      --soft: #526769;
+      --accent-dark: #005d66;
+      --line: rgba(8,47,52,0.10);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: var(--bg);
       color: var(--text);
-      padding: 24px;
+      background: linear-gradient(180deg, #fcfcf9 0%, var(--bg) 100%);
+      min-height: 100vh;
+      padding: 28px;
     }
 
-    .page {
-      position: relative;
-      max-width: 900px;
-      margin: auto;
-      background: var(--surface);
-      border-radius: 28px;
-      padding: 40px;
-      border: 1px solid var(--border);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.05);
-      overflow: hidden;
+    .page { max-width: 980px; margin: 0 auto; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 56px;
     }
 
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+    .brand img {
+      width: 86px;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+
+    .lang a {
+      color: var(--accent-dark);
+      text-decoration: none;
       font-size: 14px;
+      font-weight: 700;
+      margin-left: 16px;
     }
 
-    .lang-switch a {
-      margin-left: 10px;
+    .lang a.active { text-decoration: underline; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      padding: 52px;
+      box-shadow: 0 24px 70px rgba(8,47,52,0.08);
+    }
+
+    .back {
+      display: inline-block;
+      color: var(--soft);
       text-decoration: none;
-      color: var(--accent);
+      font-size: 14px;
       font-weight: 600;
-    }
-
-    .lang-switch a.active {
-      text-decoration: underline;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      opacity: 0.9;
     }
 
     h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-      margin-top: 10px;
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      margin: 18px 0 26px;
     }
 
     p {
-      color: var(--text-soft);
-      line-height: 1.8;
+      color: var(--soft);
+      font-size: 18px;
+      line-height: 1.75;
+      margin: 0 0 18px;
+      max-width: 760px;
     }
 
-    @media (max-width: 600px) {
-      .page {
-        padding: 56px 18px 28px;
-      }
-
-      h1 {
-        font-size: 34px;
-      }
-
-      .lang-switch {
-        top: 14px;
-        right: 14px;
-      }
+    @media (max-width: 700px) {
+      body { padding: 18px; }
+      .nav { margin-bottom: 34px; }
+      .brand img { width: 78px; mix-blend-mode: multiply; }
+      .card { padding: 32px 22px; border-radius: 30px; }
+      h1 { font-size: 38px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <div class="lang-switch">
-      <a href="../about.html">EN</a>
-      <a href="../de/about.html">DE</a>
-      <a href="about.html" class="active">FR</a>
-    </div>
+  <main class="page">
+    <nav class="nav">
+      <a class="brand" href="/fr/">
+        <img src="../logo-transparent.png" alt="Logo CarHub">
+      </a>
 
-    <a href="index.html">← Retour à l’accueil</a>
+      <div class="lang">
+        <a href="/about.html">EN</a>
+        <a href="/de/about.html">DE</a>
+        <a href="/fr/about.html" class="active">FR</a>
+      </div>
+    </nav>
 
-    <h1>Présentation</h1>
+    <section class="card">
+      <a class="back" href="index.html">← Accueil</a>
 
-    <p>
-      CarHub est une plateforme conçue pour simplifier la manière dont les conducteurs interagissent avec les garages, les prestataires de services et les autres entreprises liées à l’entretien automobile.
-    </p>
+      <h1>Une manière plus simple de connecter les conducteurs aux services automobiles.</h1>
 
-    <p>
-      Notre objectif est de rendre la réservation de services liés au véhicule simple, rapide et transparente, afin de permettre aux utilisateurs de trouver et de réserver facilement des services tels que garages, changement de pneus, lavage auto, detailing, film de protection et plus encore.
-    </p>
+      <p>
+        CarHub est en cours de développement pour aider les conducteurs à trouver, comparer et réserver plus facilement des services liés à leur véhicule.
+      </p>
 
-    <p>
-      En plus des réservations, CarHub rassemble ce qui se passe dans le monde automobile au Luxembourg et dans la Grande Région, y compris les événements, les rencontres et les informations pertinentes pour les passionnés d’automobile.
-    </p>
+      <p>
+        La plateforme est conçue pour des services tels que les garages, le changement de pneus, le detailing, le lavage auto, le film de protection et d’autres solutions d’entretien automobile.
+      </p>
 
-    <p>
-      En combinant des outils pratiques et un contenu tourné vers la communauté, CarHub a pour ambition de devenir un point central pour les conducteurs, qu’il s’agisse d’organiser les services de leur véhicule ou de rester connectés à la scène automobile locale.
-    </p>
+      <p>
+        CarHub aidera également les utilisateurs à découvrir des événements auto et à rester connectés à la scène automobile au Luxembourg.
+      </p>
 
-    <p>
-      CarHub est actuellement en cours de développement et sera bientôt lancé.
-    </p>
-  </div>
+      <p>
+        L’objectif est de créer une plateforme simple pour l’entretien automobile, les réservations et la découverte autour de l’automobile sur mobile et web.
+      </p>
+
+      <p>
+        CarHub est actuellement en développement et sera bientôt disponible.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
