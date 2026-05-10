@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About CarHub</title>
+
+  <link rel="icon" href="favicon.png">
+
+  <style>
+    :root {
+      --bg: #f3f5f2;
+      --surface: #ffffff;
+      --text: #082f34;
+      --soft: #526769;
+      --accent-dark: #005d66;
+      --line: rgba(8,47,52,0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #fcfcf9 0%, var(--bg) 100%);
+      min-height: 100vh;
+      padding: 28px;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 56px;
+    }
+
+    .brand img {
+      width: 86px;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+
+    .lang a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      margin-left: 16px;
+    }
+
+    .lang a.active {
+      text-decoration: underline;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      padding: 52px;
+      box-shadow: 0 24px 70px rgba(8,47,52,0.08);
+    }
+
+    .back {
+      display: inline-block;
+      color: var(--soft);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    .back:hover {
+      opacity: 1;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 62px);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      margin: 18px 0 26px;
+    }
+
+    p {
+      color: var(--soft);
+      font-size: 18px;
+      line-height: 1.75;
+      margin: 0 0 18px;
+      max-width: 760px;
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 18px; }
+      .nav { margin-bottom: 34px; }
+      .brand img { width: 78px; mix-blend-mode: multiply; }
+      .card { padding: 32px 22px; border-radius: 30px; }
+      h1 { font-size: 40px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <nav class="nav">
+      <a class="brand" href="/">
+        <img src="logo-transparent.png" alt="CarHub logo">
+      </a>
+
+      <div class="lang">
+        <a href="/about.html" class="active">EN</a>
+        <a href="/de/about.html">DE</a>
+        <a href="/fr/about.html">FR</a>
+      </div>
+    </nav>
+
+    <section class="card">
+      <a class="back" href="index.html">← Home</a>
+
+      <h1>A simpler way to connect drivers with vehicle services.</h1>
+
+      <p>
+        CarHub is being built to help drivers find, compare and book vehicle-related services more easily.
+      </p>
+
+      <p>
+        The platform is designed for services such as garages, tyre changes, detailing, car washes, paint protection film and other vehicle care solutions.
+      </p>
+
+      <p>
+        CarHub will also help users discover car events and stay connected to the automotive scene in Luxembourg.
+      </p>
+
+      <p>
+        The goal is to create one simple platform for vehicle care, bookings and car-related discovery across mobile and web.
+      </p>
+
+      <p>
+        CarHub is currently in development and will be launching soon.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
