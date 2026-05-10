@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung | CarHub</title>
+  <link rel="icon" href="../favicon.png">
+
+  <style>
+    :root {
+      --bg: #f3f5f2;
+      --surface: #ffffff;
+      --text: #082f34;
+      --soft: #526769;
+      --accent-dark: #005d66;
+      --line: rgba(8,47,52,0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #fcfcf9 0%, var(--bg) 100%);
+      min-height: 100vh;
+      padding: 28px;
+    }
+
+    .page { max-width: 980px; margin: 0 auto; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 56px;
+    }
+
+    .brand img {
+      width: 86px;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+
+    .lang a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      margin-left: 16px;
+    }
+
+    .lang a.active { text-decoration: underline; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      padding: 52px;
+      box-shadow: 0 24px 70px rgba(8,47,52,0.08);
+    }
+
+    .back {
+      display: inline-block;
+      color: var(--soft);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      margin: 18px 0 26px;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    h2 {
+      margin: 34px 0 12px;
+      font-size: 22px;
+    }
+
+    p {
+      color: var(--soft);
+      font-size: 17px;
+      line-height: 1.75;
+      margin: 0 0 16px;
+      max-width: 760px;
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 18px; }
+      .nav { margin-bottom: 34px; }
+      .brand img { width: 78px; mix-blend-mode: multiply; }
+      .card { padding: 32px 22px; border-radius: 30px; }
+      h1 { font-size: 34px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <nav class="nav">
+      <a class="brand" href="/de/">
+        <img src="../logo-transparent.png" alt="CarHub logo">
+      </a>
+
+      <div class="lang">
+        <a href="/privacy.html">EN</a>
+        <a href="/de/privacy.html" class="active">DE</a>
+        <a href="/fr/privacy.html">FR</a>
+      </div>
+    </nav>
+
+    <section class="card">
+      <a class="back" href="index.html">← Startseite</a>
+
+      <h1>Datenschutzerklärung</h1>
+
+      <p>
+        Diese Website wird von CarHub betrieben.
+      </p>
+
+      <p>
+        Diese Website dient derzeit als einfache Coming-Soon-Seite. Aktuell erheben wir über diese Website keine personenbezogenen Daten über Formulare, Benutzerkonten oder Buchungsfunktionen.
+      </p>
+
+      <h2>Technische Daten</h2>
+      <p>
+        Technische Daten wie IP-Adresse, Browserinformationen, Geräteinformationen und Serveranfragen können automatisch für Hosting, Sicherheit, Leistung und Bereitstellung der Website verarbeitet werden.
+      </p>
+
+      <h2>Zukünftige Änderungen</h2>
+      <p>
+        Falls künftig Cookies, Analysen, Benutzerkonten, Buchungssysteme oder Kontaktformulare hinzugefügt werden, wird diese Datenschutzerklärung entsprechend aktualisiert.
+      </p>
+
+      <h2>Kontakt</h2>
+      <p>
+        Bei Fragen zum Datenschutz: contact@carhub.lu
+      </p>
+
+      <p>
+        Letzte Aktualisierung: 8. Mai 2026
+      </p>
+    </section>
+  </main>
+</body>
+</html>
